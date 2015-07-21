@@ -2,15 +2,17 @@ $(function() {
 	//event defined below
 	$("button").click(function(event) {
 		event.preventDefault();
-		getStatus();
+		var entry = $("#airin").val();
+		getStatus(entry);
 	});
 	// getStatus();
 	//get
 
-	function getStatus(){
+	function getStatus(airport){
 		// alert("this is it");
 		$.ajax({
-			url: "http://services.faa.gov/airport/status/AUS?format=json",
+			type: "get",
+			url: "http://services.faa.gov/airport/status/"+airport+"?format=json",
 			data: {
 				name: "name",
 				weather: "weather",
@@ -19,15 +21,19 @@ $(function() {
 
 			dataType: "json",
 			success: function(data, textStatus, jqXHR) {
-				var html = $("<h2>" + data.name + " - " + data.status.reason + "</h2>");
-				$("#search-air").prepend(html);
-				// alert(data.name);
+				var result = "<h3>" + data.name + " - " + data.status.reason + "</h3>";
+				$("#search-air").html(result);
+				$("#search-air-previous").prepend(result);
 			},
 			error: function() {
-				alert("Something fucked up!");
-			}
+				alert("Something didn't work!");
+			},
+			complete: function() {
+        		// alert("Done Loading!")
+        	}
 
 		});
+
 	}
 
 });
