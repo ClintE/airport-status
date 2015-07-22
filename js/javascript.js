@@ -20,7 +20,7 @@ $(function() {
 			// },
 			dataType: "json",
 			success: function(data, textStatus, jqXHR) {
-				var result = "<h3>" + data.name + " - " + data.status.reason + " - " + data.weather.weather + "</h3>";
+				var result = "<h4>" + data.name + " - " + data.status.reason + " - " + data.weather.weather + "</h4>";
 				$("#search-air").html(result);
 				$("#search-air-previous").prepend(result);
 			},

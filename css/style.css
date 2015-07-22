@@ -2,9 +2,15 @@
 body {
 	background-color: #3887be;
 }
-h3 {
+.form {
+	padding-top: 3em;
+}
+h4 {
 	font-family: verdana;}
 
 .sidebar {
 	float: right;
+}
+#air-in {
+	float: left;
 }
