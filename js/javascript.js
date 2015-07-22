@@ -5,22 +5,17 @@ $(function() {
 		var entry = $("#airin").val();
 		getStatus(entry);
 	});
-	// getStatus();
-	//get
+	
 
 	function getStatus(airport){
 		// alert("this is it");
 		$.ajax({
 			type: "get",
 			url: "http://services.faa.gov/airport/status/"+airport+"?format=json",
-			// data: {
-			// 	name: "name",
-			// 	weather: "weather",
-			// 	status: "wind"
-			// },
 			dataType: "json",
+
 			success: function(data, textStatus, jqXHR) {
-				var result = "<h4>" + data.name + " - " + data.status.reason + " - " + data.weather.weather + "</h4>";
+				var result = "<h3>" + data.name + "</h3>" + "<h4>" + data.status.reason + "</h4>" + "<h4>" + data.weather.weather + "</h4>" + "<h4>" + data.weather.temp + "</h4>";
 				$("#search-air").html(result);
 				$("#search-air-previous").prepend(result);
 			},
@@ -30,9 +25,6 @@ $(function() {
 			complete: function() {
         		// alert("Done Loading!")
         	}
-
 		});
-
 	}
-
 });
