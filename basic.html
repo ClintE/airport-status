@@ -8,7 +8,7 @@
     <title>Airport info app</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap -->
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,20 +19,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/javascript.js"></script>
   </head>
-  <body>
-    
-    
-    <button>Load This</button>
 
-    <form id="find">
-      <input type="search" id="airin" placeholder="airport name"/>
-    </form>
+  <body> 
 
-    <div id="search-air">
+    <div class="col-sm-8 blog-main">
+
+      <button>Load This</button>
+
+      <form id="find">
+        <input type="search" id="airin" placeholder="airport name"/>
+      </form>
+
+      <div id="search-air"></div>
+    </div> 
+
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+      <div id="search-air-previous" class="sidebar"></div>
+
     </div>
-
-    <div id="search-air-previous" class="sidebar">
-    </div>
+    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     
