@@ -2,6 +2,8 @@
 body {
 	background-color: #3887be;
 }
+h3 {
+	font-family: verdana;}
 
 .sidebar {
 	float: right;
