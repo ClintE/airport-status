@@ -12,7 +12,7 @@ $(function() {
 	
 
 	function getStatus(airport){
-		// alert("this is it");
+		
 		$.ajax({
 			type: "get",
 			url: "http://services.faa.gov/airport/status/"+airport+"?format=json",

@@ -9,17 +9,18 @@ body {
 	padding-top: 4em;
 }
 header {
-	height: 7em;
+	height: 9em;
 	background-color: #404040;
 	width: 100%;
 }
 .header-box {
-	margin-left: 30%;
+	margin-left: 0%;
 	margin-right: 0%;
 	color: #ebeff2;
 	font-family: verdana;
 	font-size: 2em;
 	padding-top: 1em;
+	text-align: center;
 }
 h3 {
 	color: #404040;
